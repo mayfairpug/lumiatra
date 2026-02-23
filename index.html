@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lumiatra - Live Data Extraction + Verified Outreach</title>
+  <meta name="description" content="UK-based. Live scraping from maps/search/directories. Verification + deliverability-first sending. Manual, safe, expert-led delivery." />
+  <meta name="theme-color" content="#070712" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="progressbar" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Lumiatra home">
+        <img class="brand-logo" src="assets/logo.png" alt="Lumiatra logo" />
+        <div class="name">
+          <b>Lumiatra</b>
+          <span>Live data • verification • deliverability-first outreach</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="links" id="navLinks" aria-label="Primary">
+        <a href="#packages">Packages</a>
+        <a href="#how">How it works</a>
+        <a href="#scraping">Scraping</a>
+        <a href="#verify">Verification</a>
+        <a href="#outreach">Outreach</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-right">
+        <div class="clock" aria-label="Current time">
+          <div class="clock-dot"></div>
+          <div class="clock-text">
+            <div class="clock-time" id="clockTime">—</div>
+            <div class="clock-date" id="clockDate">—</div>
+          </div>
+        </div>
+
+        <div class="nav-ctas">
+          <a class="btn ghost" href="mailto:info@lumiatra.online?subject=Enquiry%20%E2%80%94%20Lumiatra">Email</a>
+          <a class="btn whatsapp" href="https://wa.me/447818930933?text=Hi%20Lumiatra%20%E2%80%94%20I%27d%20like%20help%20with%20live%20leads%20and%20outreach.%20Can%20we%20chat%3F" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn primary" href="#packages">Get started</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="gridlines"></div>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="pill reveal">UK-based • manual, expert-led delivery • live data on order</div>
+          <h1 class="h-title reveal"><span class="grad">Real-time B2B leads</span> - extracted, verified, and safely sent.</h1>
+          <p class="h-sub reveal">
+            Lumiatra pulls <b>live</b> contact data (emails, websites, WhatsApp links, socials) from sources like Google Maps, search and directories —
+            then <b>verifies</b> and (optionally) runs <b>deliverability-first</b> outreach so your messages actually land.
+          </p>
+
+          <div class="hero-bullets reveal">
+            <div class="hb">
+              <span class="hb-ico" aria-hidden="true">
+                <svg class="i" class="i" viewBox="0 0 24 24"><path d="M4 7h16v10H4V7Z" /><path d="m4 7 8 6 8-6" /></svg>
+              </span>
+              <div><b>Live extraction</b><span>Fresh data pulled at time of order.</span></div>
+            </div>
+            <div class="hb">
+              <span class="hb-ico" aria-hidden="true">
+                <svg class="i" viewBox="0 0 24 24"><path d="M12 2 20 6v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6l8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <div><b>Verification + cleaning</b><span>Lower bounces, safer sending.</span></div>
+            </div>
+            <div class="hb">
+              <span class="hb-ico" aria-hidden="true">
+                <svg class="i" viewBox="0 0 24 24"><path d="M3 12 21 5l-7 18-2-8-9-3Z"/><path d="m12 15 9-10"/></svg>
+              </span>
+              <div><b>Managed outreach</b><span>Warm-up, cadence, monitoring.</span></div>
+            </div>
+          </div>
+
+          <div class="hero-ctas reveal">
+            <a class="btn primary" href="#packages">Choose a package</a>
+            <a class="btn ghost" href="#contact">Get a quote</a>
+          </div>
+
+          <div class="mini-trust reveal">
+            <span class="dot"></span> Wholesalers • Manufacturers • Distributors • Service providers • Agencies
+          </div>
+        </div>
+
+        <div class="hero-panel reveal">
+          <div class="panel-top">
+            <div class="panel-title">
+              <b>Global operations</b>
+              <span class="kbd">Live</span>
+            </div>
+            <div class="panel-sub">Servers running • emails moving • routes lighting up</div>
+          </div>
+
+          <div class="map-wrap">
+            <svg class="i" class="map" viewBox="0 0 980 500" role="img" aria-label="World map with active nodes and routes">
+              <defs>
+                <linearGradient id="ocean" x1="0" x2="1">
+                  <stop offset="0" stop-color="rgba(255,79,216,.10)"/>
+                  <stop offset="1" stop-color="rgba(50,209,255,.12)"/>
+                </linearGradient>
+                <radialGradient id="glow" cx="35%" cy="35%" r="70%">
+                  <stop offset="0" stop-color="rgba(255,255,255,.95)"/>
+                  <stop offset="1" stop-color="rgba(255,255,255,0)"/>
+                </radialGradient>
+              </defs>
+
+              <rect x="0" y="0" width="980" height="500" rx="24" fill="url(#ocean)"/>
+
+              <path class="land" d="M110 150c35-55 110-90 170-78 46 9 72 35 92 58 18 21 12 40-8 54-25 18-40 40-52 62-13 25-55 58-106 64-52 6-120-12-150-48-22-26-22-66 54-112z"/>
+              <path class="land" d="M310 275c18-18 46-25 70-16 19 7 35 27 38 46 4 24-8 46-20 66-14 24-22 52-32 74-9 20-33 22-46 4-13-18-8-40 0-60 6-16 0-26-7-38-12-20-20-56-3-76z"/>
+              <path class="land" d="M470 125c28-24 66-32 98-22 18 6 30 18 36 30 7 14 0 26-12 32-18 8-26 18-34 30-10 16-30 22-52 18-22-4-46-16-54-34-8-18 0-38 18-54z"/>
+              <path class="land" d="M520 210c26-22 62-20 88 2 22 18 28 54 18 82-10 28-26 56-40 82-12 22-42 22-56 2-12-18-10-42-2-64 6-18 0-32-8-48-14-30-16-42 0-56z"/>
+              <path class="land" d="M600 145c64-56 160-64 240-28 48 22 72 50 80 78 8 30-12 54-50 64-46 12-76 30-110 56-40 30-98 40-158 24-56-16-92-56-92-88 0-34 24-74 90-106z"/>
+              <path class="land" d="M790 345c34-26 82-26 112 0 26 22 26 56-2 78-30 24-70 26-102 10-30-14-44-42-8-88z"/>
+              <path class="land" d="M290 70c24-22 58-24 78-10 16 12 12 30-8 40-18 10-44 10-60 2-16-10-20-18-10-32z"/>
+
+              <path class="link" id="r1" d="M510 150 C440 160, 340 170, 240 185" />
+              <path class="link link2" id="r2" d="M510 150 C620 210, 710 260, 820 360" />
+              <path class="link link3" id="r3" d="M510 150 C540 150, 565 150, 590 150" />
+              <path class="link link4" id="r4" d="M510 150 C520 240, 560 290, 560 320" />
+
+              <g class="packet">
+                <circle r="6" fill="rgba(255,79,216,.9)">
+                  <animateMotion dur="4.8s" repeatCount="indefinite" rotate="auto">
+                    <mpath href="#r1"></mpath>
+                  </animateMotion>
+                </circle>
+              </g>
+              <g class="packet">
+                <circle r="6" fill="rgba(50,209,255,.9)">
+                  <animateMotion dur="5.6s" repeatCount="indefinite" rotate="auto">
+                    <mpath href="#r2"></mpath>
+                  </animateMotion>
+                </circle>
+              </g>
+              <g class="packet">
+                <circle r="5" fill="rgba(255,204,77,.95)">
+                  <animateMotion dur="3.6s" repeatCount="indefinite" rotate="auto">
+                    <mpath href="#r3"></mpath>
+                  </animateMotion>
+                </circle>
+              </g>
+
+              <g class="node" data-label="UK • London">
+                <circle class="pulse" cx="510" cy="150" r="24" fill="url(#glow)" opacity=".35"/>
+                <circle cx="510" cy="150" r="6" fill="rgba(255,204,77,.98)"/>
+              </g>
+              <g class="node node2" data-label="USA • Virginia">
+                <circle class="pulse" cx="240" cy="185" r="26" fill="url(#glow)" opacity=".30"/>
+                <circle cx="240" cy="185" r="6" fill="rgba(50,209,255,.98)"/>
+              </g>
+              <g class="node node3" data-label="France • Paris">
+                <circle class="pulse" cx="540" cy="155" r="22" fill="url(#glow)" opacity=".28"/>
+                <circle cx="540" cy="155" r="6" fill="rgba(255,79,216,.98)"/>
+              </g>
+              <g class="node node4" data-label="Singapore">
+                <circle class="pulse" cx="820" cy="360" r="22" fill="url(#glow)" opacity=".22"/>
+                <circle cx="820" cy="360" r="6" fill="rgba(62,224,122,.98)"/>
+              </g>
+              <g class="node node5" data-label="Germany">
+                <circle class="pulse" cx="560" cy="150" r="20" fill="url(#glow)" opacity=".22"/>
+                <circle cx="560" cy="150" r="5" fill="rgba(255,204,77,.95)"/>
+              </g>
+              <g class="node node6" data-label="South Africa">
+                <circle class="pulse" cx="560" cy="320" r="20" fill="url(#glow)" opacity=".20"/>
+                <circle cx="560" cy="320" r="5" fill="rgba(50,209,255,.90)"/>
+              </g>
+            </svg>
+
+            <div class="map-legend">
+              <div class="legend-row">
+                <span class="lg-dot d1"></span><span>UK (core ops)</span>
+                <span class="lg-dot d2"></span><span>USA (VPS)</span>
+                <span class="lg-dot d3"></span><span>EU nodes</span>
+              </div>
+              <div class="legend-row">
+                <span class="lg-dot d4"></span><span>Global routing</span>
+                <span class="lg-dot d5"></span><span>Live packets</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="live-row">
+            <div class="server">
+              <div class="server-top">
+                <span class="srv-dot"></span><b>Servers</b><span class="muted2">online</span>
+              </div>
+              <div class="racks" aria-hidden="true">
+                <div class="rack"><i></i><i></i><i></i><i></i></div>
+                <div class="rack"><i></i><i></i><i></i><i></i></div>
+                <div class="rack"><i></i><i></i><i></i><i></i></div>
+              </div>
+            </div>
+
+            <div class="actions">
+              <div class="action"><span class="a-ico">
+                <svg class="i" viewBox="0 0 24 24"><path d="M4 7h16v10H4V7Z"/><path d="m4 7 8 6 8-6"/></svg>
+              </span><b id="liveEmails">—</b><span class="muted">emails queued</span></div>
+
+              <div class="action"><span class="a-ico">
+                <svg class="i" viewBox="0 0 24 24"><path d="M7 4h10v16H7V4Z"/><path d="M9 8h6M9 12h6"/><path d="m9 16 2 2 4-4"/></svg>
+              </span><b id="liveVerified">—</b><span class="muted">verified today</span></div>
+
+              <div class="action"><span class="a-ico">
+                <svg class="i" viewBox="0 0 24 24"><path d="M12 2 20 6v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6l8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+              </span><b id="liveClean">—</b><span class="muted">clean sends</span></div>
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat"><div class="stat-num" data-count="1382947">0</div><div class="stat-lbl">Emails extracted</div></div>
+            <div class="stat"><div class="stat-num" data-count="921403">0</div><div class="stat-lbl">Emails verified</div></div>
+            <div class="stat"><div class="stat-num" data-count="287">0</div><div class="stat-lbl">Clients served</div></div>
+            <div class="stat"><div class="stat-num live" data-live="people">0</div><div class="stat-lbl">People viewing</div></div>
+          </div>
+
+          <div class="panel-foot">
+            <div class="small">Tell us country + keywords - we’ll advise the safest, fastest approach.</div>
+            <a class="btn whatsapp" href="https://wa.me/447818930933?text=Hi%20Lumiatra%20%E2%80%94%20I%27d%20like%20a%20live%20scrape.%20Country%3A%20%5B%5D%20Keywords%3A%20%5B%5D" target="_blank" rel="noopener">Message on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="packages">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="reveal">Pick your level</h2>
+          <p class="lead reveal">Three clean options - and a clear flow from extraction → verification → sending.</p>
+        </div>
+
+        <div class="cards-flow">
+          <div class="flow-line" aria-hidden="true"></div>
+
+          <div class="card reveal">
+            <div class="card-top">
+              <div class="icon big" aria-hidden="true">
+                <svg class="i" viewBox="0 0 24 24"><path d="M4 7h16v10H4V7Z"/><path d="m4 7 8 6 8-6"/></svg>
+              </div>
+              <div><b>1) Scraping only</b><div class="small muted">Best when you already send.</div></div>
+            </div>
+            <ul class="list">
+              <li>Live scrape on order (no stale DB)</li>
+              <li>Emails + websites + WhatsApp + socials</li>
+              <li>CSV + optional CRM-ready formatting</li>
+            </ul>
+            <a class="btn primary full" href="#contact" data-prefill="Scraping only">Get a quote</a>
+          </div>
+
+          <div class="card reveal hot">
+            <div class="badge">Most popular</div>
+            <div class="card-top">
+              <div class="icon big" aria-hidden="true">
+                <svg class="i" viewBox="0 0 24 24"><path d="M7 4h10v16H7V4Z"/><path d="M9 8h6M9 12h6"/><path d="m9 16 2 2 4-4"/></svg>
+              </div>
+              <div><b>2) Scrape + verification</b><div class="small muted">Cleaner list = safer sends.</div></div>
+            </div>
+            <ul class="list">
+              <li>Everything in Scraping</li>
+              <li>Verification + suppression guidance</li>
+              <li>Segments for safer targeting</li>
+            </ul>
+            <a class="btn primary full" href="#contact" data-prefill="Scrape + verification">Get a quote</a>
+          </div>
+
+          <div class="card reveal">
+            <div class="card-top">
+              <div class="icon big" aria-hidden="true">
+                <svg class="i" viewBox="0 0 24 24"><path d="M3 12 21 5l-7 18-2-8-9-3Z"/><path d="m12 15 9-10"/></svg>
+              </div>
+              <div><b>3) Managed outreach</b><div class="small muted">We set up and run it safely.</div></div>
+            </div>
+            <ul class="list">
+              <li>Everything in Scrape + verification</li>
+              <li>VPS + sending setup + monitoring</li>
+              <li>Conservative cadence protects reputation</li>
+            </ul>
+            <a class="btn primary full" href="#contact" data-prefill="Managed outreach">Talk to us</a>
+          </div>
+        </div>
+
+        <div class="banner reveal">
+          <div><b>Not a spam shop.</b> <span>We focus on legitimate B2B outreach with relevance, suppression and best practices.</span></div>
+          <a class="btn whatsapp" href="https://wa.me/447818930933?text=Hi%20Lumiatra%20%E2%80%94%20which%20package%20fits%20my%20use%20case%3F" target="_blank" rel="noopener">Ask on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="reveal">How we connect the dots</h2>
+          <p class="lead reveal">Objective → sources → extraction → cleaning → (optional) sending. Clear and controlled.</p>
+        </div>
+
+        <div class="flow">
+          <div class="flow-card reveal">
+            <div class="flow-ico" aria-hidden="true">
+              <svg class="i" viewBox="0 0 24 24"><path d="M12 2 20 6v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6l8-4Z"/><path d="M12 7v6"/><path d="M12 16h.01"/></svg>
+            </div>
+            <div><b>Start with an objective</b><p class="muted">Who are you trying to reach, where, and why? We translate that into keywords + sources.</p></div>
+          </div>
+
+          <div class="flow-card reveal">
+            <div class="flow-ico" aria-hidden="true">
+              <svg class="i" viewBox="0 0 24 24"><path d="M4 7h16v10H4V7Z"/><path d="m4 7 8 6 8-6"/></svg>
+            </div>
+            <div><b>Extract live data</b><p class="muted">Emails, sites, WhatsApp, socials, metadata - pulled in real time.</p></div>
+          </div>
+
+          <div class="flow-card reveal">
+            <div class="flow-ico" aria-hidden="true">
+              <svg class="i" viewBox="0 0 24 24"><path d="M7 4h10v16H7V4Z"/><path d="M9 8h6M9 12h6"/><path d="m9 16 2 2 4-4"/></svg>
+            </div>
+            <div><b>Verify & clean</b><p class="muted">Lower bounce risk, safer segments, suppression guidance.</p></div>
+          </div>
+
+          <div class="flow-card reveal">
+            <div class="flow-ico" aria-hidden="true">
+              <svg class="i" viewBox="0 0 24 24"><path d="M3 12 21 5l-7 18-2-8-9-3Z"/><path d="m12 15 9-10"/></svg>
+            </div>
+            <div><b>Send safely (optional)</b><p class="muted">Warm-up, cadence, monitoring - protect your domains and placement.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="scraping">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="reveal">1) Live data extraction</h2>
+          <p class="lead reveal">We scrape live data at the time of order. No stale databases, no recycled lists.</p>
+        </div>
+
+        <div class="source-grid">
+          <div class="source reveal"><span class="s-ico">📍</span><b>Google Maps</b><span>categories + cities</span></div>
+          <div class="source reveal"><span class="s-ico">G</span><b>Search</b><span>keyword footprints</span></div>
+          <div class="source reveal"><span class="s-ico">🗂️</span><b>Directories</b><span>industry portals</span></div>
+          <div class="source reveal"><span class="s-ico">🌐</span><b>Websites</b><span>contact pages</span></div>
+          <div class="source reveal"><span class="s-ico">f</span><b>Facebook</b><span>pages + links</span></div>
+          <div class="source reveal"><span class="s-ico">ig</span><b>Instagram</b><span>bios + sites</span></div>
+          <div class="source reveal"><span class="s-ico">tt</span><b>TikTok</b><span>profiles + links</span></div>
+          <div class="source reveal"><span class="s-ico">in</span><b>LinkedIn*</b><span>companies + roles</span></div>
+        </div>
+
+        <div class="split">
+          <div class="tile reveal">
+            <h3>Scraping speed calculator</h3>
+            <p class="small muted">Estimate only - speed varies by depth, regions and anti-bot controls.</p>
+            <div class="calc">
+              <label>Number of keywords</label>
+              <input id="kwCount" type="number" min="1" value="10" />
+              <label>Source complexity</label>
+              <select id="kwComplex">
+                <option value="1">Low (simple SERPs/directories)</option>
+                <option value="1.8" selected>Medium (Maps + mixed)</option>
+                <option value="2.8">High (deep enrichment)</option>
+              </select>
+              <div class="calc-out"><div class="big" id="scrapeTime">—</div><div class="small muted">Estimated run time</div></div>
+              <div class="small muted">Baseline: ~6 minutes per keyword at medium complexity.</div>
+            </div>
+          </div>
+
+          <div class="tile reveal glow">
+            <h3>What you get (typical fields)</h3>
+            <div class="deliverables">
+              <div class="del"><span class="del-ico" aria-hidden="true">
+                <svg class="i" viewBox="0 0 24 24"><path d="M4 7h16v10H4V7Z"/><path d="m4 7 8 6 8-6"/></svg>
+              </span><div><b>Emails</b><span class="muted">where published</span></div></div>
+
+              <div class="del"><span class="del-ico" aria-hidden="true">
+                <svg class="i" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 1 0-7l1-1a5 5 0 0 1 7 7l-1 1"/><path d="M14 11a5 5 0 0 1 0 7l-1 1a5 5 0 0 1-7-7l1-1"/></svg>
+              </span><div><b>Websites</b><span class="muted">incl. contact pages</span></div></div>
+
+              <div class="del"><span class="del-ico" aria-hidden="true">
+                <svg class="i" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-8 8H7a3 3 0 0 1-3-3v-5a8 8 0 0 1 8-8h1"/><path d="M14 7h6v6"/><path d="M20 7 12 15"/></svg>
+              </span><div><b>WhatsApp</b><span class="muted">links/phones where available</span></div></div>
+
+              <div class="del"><span class="del-ico" aria-hidden="true">
+                <svg class="i" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 16 0"/><path d="M7 12a5 5 0 0 1 10 0"/><path d="M12 12v9"/></svg>
+              </span><div><b>Socials</b><span class="muted">IG/FB/X/etc.</span></div></div>
+
+              <div class="del"><span class="del-ico" aria-hidden="true">
+                <svg class="i" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/><path d="M8 6v12"/></svg>
+              </span><div><b>Metadata</b><span class="muted">for segmentation</span></div></div>
+            </div>
+            <div class="small muted">*Some sources can be constrained by platform rules. We’ll advise safest options.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="verify">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="reveal">2) Verification & cleaning</h2>
+          <p class="lead reveal">Clean lists protect reputation and improve placement. It’s the boring part that saves you.</p>
+        </div>
+
+        <div class="split">
+          <div class="tile reveal glow">
+            <h3>What verification protects you from</h3>
+            <div class="chips">
+              <div class="chip">High bounces</div>
+              <div class="chip">Spam flags</div>
+              <div class="chip">Blocklists</div>
+              <div class="chip">Wasted spend</div>
+            </div>
+            <p class="small muted">No verifier can remove every risky email (some traps look valid). The goal is to eliminate avoidable damage and keep sending healthy.</p>
+          </div>
+
+          <div class="tile reveal">
+            <h3>Verification speed calculator</h3>
+            <p class="small muted">Estimate duration based on list size and depth.</p>
+            <div class="calc">
+              <label>Emails to verify</label>
+              <input id="verCount" type="number" min="100" value="5000" />
+              <label>Verification depth</label>
+              <select id="verDepth">
+                <option value="1">Standard</option>
+                <option value="1.4" selected>Safer (slower)</option>
+                <option value="0.75">Fast pass</option>
+              </select>
+              <div class="calc-out"><div class="big" id="verifyTime">—</div><div class="small muted">Estimated verification time</div></div>
+              <div class="small muted">Baseline: ~2,000 emails/hour at “safer” depth.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="outreach">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="reveal">3) Deliverability-first mass email outreach</h2>
+          <p class="lead reveal">We’d rather send slower and win than blast fast and burn a domain.</p>
+        </div>
+
+        <div class="split">
+          <div class="tile reveal">
+            <h3>Sending cadence calculator</h3>
+            <p class="small muted">Conservative cadence protects sender reputation.</p>
+            <div class="calc">
+              <label>Contacts to message</label>
+              <input id="sendCount" type="number" min="50" value="1000" />
+              <label>Cadence</label>
+              <select id="sendRate">
+                <option value="20">Conservative (20/hour)</option>
+                <option value="30" selected>Balanced (30/hour)</option>
+                <option value="50">Aggressive (50/hour)</option>
+              </select>
+              <div class="calc-out"><div class="big" id="sendTime">—</div><div class="small muted">Estimated send duration</div></div>
+              <div class="small muted">Start conservative, ramp only if reputation stays clean.</div>
+            </div>
+          </div>
+
+          <div class="tile reveal glow">
+            <h3>Why slower wins (most of the time)</h3>
+            <div class="deliverables">
+              <div class="del"><span class="del-ico" aria-hidden="true">
+                <svg class="i" viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 0-4 4v3H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4Z"/><path d="M8 9V6a4 4 0 1 1 8 0v3"/></svg>
+              </span><div><b>Warm-up matters</b><span class="muted">trust is earned</span></div></div>
+
+              <div class="del"><span class="del-ico" aria-hidden="true">
+                <svg class="i" viewBox="0 0 24 24"><path d="M6 12a6 6 0 0 1 12 0"/><path d="M9 12a3 3 0 0 1 6 0"/><path d="M12 12v8"/><path d="M4 20h16"/></svg>
+              </span><div><b>Blacklists exist</b><span class="muted">protect domains/IPs</span></div></div>
+
+              <div class="del"><span class="del-ico" aria-hidden="true">
+                <svg class="i" viewBox="0 0 24 24"><path d="M12 2v3"/><path d="M12 19v3"/><path d="M4.2 4.2l2.1 2.1"/><path d="M17.7 17.7l2.1 2.1"/><path d="M2 12h3"/><path d="M19 12h3"/><path d="M4.2 19.8l2.1-2.1"/><path d="M17.7 6.3l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>
+              </span><div><b>Relevance beats volume</b><span class="muted">targeting first</span></div></div>
+
+              <div class="del"><span class="del-ico" aria-hidden="true">
+                <svg class="i" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+              </span><div><b>Opt-out + suppression</b><span class="muted">keeps you clean</span></div></div>
+            </div>
+            <div class="small muted">We can also support WhatsApp outreach where appropriate - focused on genuine business connections.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="reveal">Get a quote</h2>
+          <p class="lead reveal">Tell us what you need. We’ll propose the cleanest plan for your target.</p>
+        </div>
+
+        <div class="form-wrap reveal">
+          <form id="leadForm">
+            <div class="grid">
+              <div><label for="name">Your name *</label><input id="name" required /></div>
+              <div><label for="email">Email *</label><input id="email" type="email" required /></div>
+              <div><label for="wa">WhatsApp (optional)</label><input id="wa" placeholder="+44…" /></div>
+              <div><label for="pkg">Package *</label>
+                <select id="pkg" required>
+                  <option value="">Select…</option>
+                  <option>Scraping only</option>
+                  <option>Scrape + verification</option>
+                  <option>Managed outreach</option>
+                </select>
+              </div>
+              <div><label for="country">Country / target market *</label><input id="country" required placeholder="UK, USA, EU, etc." /></div>
+              <div><label for="objective">Business objective *</label><input id="objective" required placeholder="book demos, wholesale leads, partnerships…" /></div>
+              <div class="full"><label for="keywords">Example keywords / niches *</label><textarea id="keywords" required placeholder="e.g. “HVAC installers London”, “cosmetics wholesalers Germany”…"></textarea></div>
+              <div class="full"><label for="notes">Extra requirements</label><textarea id="notes" placeholder="Lead fields needed, volume, timeframe, sources, etc."></textarea></div>
+            </div>
+
+            <div class="consent">
+              <input id="consent" type="checkbox" required />
+              <label for="consent">I agree Lumiatra can contact me about my enquiry.</label>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Send enquiry</button>
+              <button class="btn whatsapp" type="button" id="sendWhatsApp">Send via WhatsApp</button>
+              <a class="btn ghost" href="mailto:info@lumiatra.online" id="sendEmailLink">Open email</a>
+            </div>
+
+            <div class="small muted">UK-based and usually available. If you’re ready, we can start quickly.</div>
+          </form>
+
+          <div class="form-side">
+            <div class="side-card glow">
+              <div class="pill">Compliance-first</div>
+              <h3>We don’t spam.</h3>
+              <p class="small muted">We support legitimate B2B outreach with relevance, suppression and opt-out. We’ll guide you on best practices and privacy expectations.</p>
+              <a class="btn whatsapp full" href="https://wa.me/447818930933?text=Hi%20Lumiatra%20%E2%80%94%20quick%20question%20about%20compliance%20and%20outreach%3A" target="_blank" rel="noopener">Ask on WhatsApp</a>
+            </div>
+
+            <div class="side-card">
+              <h3>Contact</h3>
+              <div class="small"><b>Email:</b> info@lumiatra.online</div>
+              <div class="small"><b>WhatsApp:</b> +44 7818 930933</div>
+              <div class="small muted" style="margin-top:10px;">We’ll steer you towards the safest approach for deliverability and compliance.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="reveal">FAQs</h2>
+          <p class="lead reveal">Quick answers. For specifics: WhatsApp us.</p>
+        </div>
+
+        <div class="faq-grid">
+          <details class="faq reveal"><summary>Do you use a pre-built database?</summary><p>No - we scrape live at the time of order so you’re not paying for stale contacts.</p></details>
+          <details class="faq reveal"><summary>Can you eliminate 100% of bad emails?</summary><p>No. We reduce bounces and obvious traps; some risky inboxes look valid.</p></details>
+          <details class="faq reveal"><summary>Why can’t we send everything immediately?</summary><p>Sending too fast can damage reputation and inbox placement. Slow + consistent usually wins.</p></details>
+          <details class="faq reveal"><summary>What makes Lumiatra different?</summary><p>We combine extraction, cleaning and deliverability-first workflow - with a manual, expert approach and safe infrastructure.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot">
+      <div class="foot-left">
+        <img src="assets/logo.png" alt="" />
+        <div><b>Lumiatra</b><div class="small muted">UK-based • live extraction • verification • deliverability-first outreach</div></div>
+      </div>
+      <div class="foot-ctas">
+        <a class="btn ghost" href="mailto:info@lumiatra.online">info@lumiatra.online</a>
+        <a class="btn whatsapp" href="https://wa.me/447818930933?text=Hi%20Lumiatra%20%E2%80%94%20quick%20question%3A" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn primary" href="#contact">Get a quote</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="stickybar" role="region" aria-label="Sticky actions">
+    <div class="container sticky-inner">
+      <div class="sticky-left">
+        <img src="assets/logo.png" alt="" />
+        <div><b>Lumiatra</b><span class="small muted">Live data • verified • safe outreach</span></div>
+      </div>
+      <div class="sticky-right">
+        <a class="btn ghost" href="mailto:info@lumiatra.online?subject=Enquiry%20%E2%80%94%20Lumiatra">Email</a>
+        <a class="btn whatsapp" href="https://wa.me/447818930933?text=Hi%20Lumiatra%20%E2%80%94%20I%27d%20like%20a%20quote.%20Country%3A%20%5B%5D%20Keywords%3A%20%5B%5D" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn primary" href="#contact">Get a quote</a>
+      </div>
+    </div>
+  </div>
+
+  <button id="backToTop" class="btt" aria-label="Back to top" title="Back to top">
+    <span class="btt-ico">↑</span><span class="btt-txt">Top</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
