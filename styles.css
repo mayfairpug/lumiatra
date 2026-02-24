@@ -313,30 +313,3 @@ form{border-radius:30px;border:1px solid rgba(255,255,255,.12);background:rgba(2
 /* Reveal */
 .reveal{opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .6s ease}
 .reveal.on{opacity:1;transform:translateY(0)}
-
-
-/* Icon sizing + centering fixes */
-.icon, .hb-ico, .flow-ico, .del-ico, .a-ico { display:flex; align-items:center; justify-content:center; }
-.icon svg.i, .hb-ico svg.i, .flow-ico svg.i, .del-ico svg.i, .a-ico svg.i { display:block; margin:auto; transform-origin:center; }
-
-/* Bigger icons (crisper, less "tiny") */
-.icon{width:72px;height:72px;border-radius:26px}
-.icon svg.i{width:34px;height:34px}
-.hb-ico{width:58px;height:58px;border-radius:22px}
-.hb-ico svg.i{width:30px;height:30px}
-.flow-ico{width:66px;height:66px;border-radius:26px}
-.flow-ico svg.i{width:32px;height:32px}
-.del-ico{width:58px;height:58px;border-radius:20px}
-.del-ico svg.i{width:30px;height:30px}
-.a-ico{width:50px;height:50px;border-radius:18px}
-.a-ico svg.i{width:26px;height:26px}
-
-/* Subtle icon motion */
-@keyframes iconFloat { 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-3px) } }
-svg.i{ animation:iconFloat 3.2s ease-in-out infinite; }
-.del:nth-child(2) svg.i, .flow-card:nth-child(2) svg.i, .action:nth-child(2) svg.i { animation-duration:3.6s }
-.del:nth-child(3) svg.i, .flow-card:nth-child(3) svg.i, .action:nth-child(3) svg.i { animation-duration:3.0s }
-.del:nth-child(4) svg.i, .flow-card:nth-child(4) svg.i, .action:nth-child(4) svg.i { animation-duration:3.8s }
-
-/* helper copy */
-.muted2{ display:inline-block; opacity:.78; font-size:0.95em; margin-top:.25rem }

@@ -43,34 +43,24 @@ document.querySelectorAll('.stat-num[data-count]').forEach((el)=>{
 function rand(min, max){ return Math.floor(Math.random()*(max-min+1))+min; }
 let people = rand(6, 24);
 document.querySelectorAll('.stat-num.live[data-live="people"]').forEach(el=>el.textContent = String(people));
-function stepPeople(){
-  const pause = rand(1800, 5600);
-  people = Math.max(2, Math.min(48, people + rand(-2,3)));
-  document.querySelectorAll('.stat-num.live[data-live="people"]').forEach(el=>el.textContent = String(people));
-  setTimeout(stepPeople, pause);
-}
-stepPeople();
+setInterval(()=>{ people = Math.max(2, Math.min(38, people + rand(-1,2)));
   document.querySelectorAll('.stat-num.live[data-live="people"]').forEach(el=>el.textContent = String(people));
 }, 4200);
 
-let q=rand(1200, 4800), v=rand(800, 3400), c=rand(600, 2600);
+let q=rand(120, 460), v=rand(60, 220), c=rand(40, 160);
 const qEl=document.getElementById('liveEmails');
 const vEl=document.getElementById('liveVerified');
 const cEl=document.getElementById('liveClean');
-
-function stepLive(){
-  const pause = rand(900, 4200);
-  q += rand(5, 80);
-  v += rand(3, 55);
-  c += rand(2, 40);
-
+function updateLive(){
+  q = Math.max(30, Math.min(1200, q + rand(-20, 60)));
+  v = Math.max(10, Math.min(900, v + rand(-10, 45)));
+  c = Math.max(10, Math.min(700, c + rand(-8, 30)));
   if(qEl) qEl.textContent = q.toLocaleString();
   if(vEl) vEl.textContent = v.toLocaleString();
   if(cEl) cEl.textContent = c.toLocaleString();
-
-  setTimeout(stepLive, pause);
 }
-stepLive();
+updateLive();
+setInterval(updateLive, 2600);
 
 document.querySelectorAll('[data-prefill]').forEach((btn)=>{
   btn.addEventListener('click', ()=>{
